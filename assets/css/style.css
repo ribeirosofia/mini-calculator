@@ -28,9 +28,13 @@
 #btn-add {
   height: 60px;
   border: none;
-  background-color: #11538c;
+  background-color: #213abf;
   color: #fff;
   border-radius: 5px;
+}
+
+#btn-add:hover {
+  background-color: #162780;
 }
 
 .form > input {
