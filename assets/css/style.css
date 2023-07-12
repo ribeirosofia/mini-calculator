@@ -1,51 +1,54 @@
 .container {
-    max-width: 640px;
-    margin: 50px;
-    height: 100px;
-    padding: 60px;
-    border-radius: 10px;
-    /* padding: 100px; */
-  }
-  
-  .container > .form {
-    background: #e6e6e6;
-    padding: 70px;
-    border-radius: 10px;
-  }
-  
-  .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 30px;
-  }
-  
-  .form > .btn {
-    grid-column: 1;
-    grid-row: 2;
-    max-width: 100px;
-  }
-  
-  .btn {
-    height: 60px;
-    border: none;
-    background-color: #11538c;
-    color: #fff;
-    border-radius: 5px;
-  }
-  
-  .form > input {
-    padding-left: 15px;
-    border-radius: 5px;
-    border: 1px solid #808080;
-  }
-  
-  .form > #number1, #number2{
-    grid-column: 2;
-  }
-  
-  .form > #result {
-    grid-row: 3;
-    grid-column: 1 / span 2;
-  }
-  
+  max-width: 640px;
+  margin: 50px;
+  height: 100px;
+  padding: 60px;
+  border-radius: 10px;
+}
+
+.container > .form {
+  background: #e6e6e6;
+  padding: 70px;
+  border-radius: 10px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.form > #btn-add {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 100px;
+}
+
+#btn-add {
+  height: 60px;
+  border: none;
+  background-color: #11538c;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.form > input {
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid #808080;
+}
+
+.form > #inputA {
+  grid-column: 2;
+}
+
+.form > #inputB {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.form > #inputC {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+}
