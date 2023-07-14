@@ -25,7 +25,8 @@
   max-width: 100px;
 }
 
-#btn-add {
+#btn-add,
+#btn-min {
   height: 60px;
   border: none;
   background-color: #213abf;
@@ -34,6 +35,10 @@
 }
 
 #btn-add:hover {
+  background-color: #162780;
+}
+
+#btn-min:hover {
   background-color: #162780;
 }
 
