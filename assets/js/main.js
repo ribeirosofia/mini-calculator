@@ -6,10 +6,10 @@ const calcSum = () => {
   const addBtn = document.getElementById("btn-add");
   addBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    doMath();
+    doSum();
   });
 
-  doMath = () => {
+  doSum = () => {
     const valueA = Number(inputA.value);
     const valueB = Number(inputB.value);
 
