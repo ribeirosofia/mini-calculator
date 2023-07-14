@@ -1,4 +1,4 @@
-const calcSum = () => {
+const calculator = () => {
   const inputA = document.getElementById("inputA");
   const inputB = document.getElementById("inputB");
   const inputC = document.getElementById("inputC");
@@ -9,25 +9,35 @@ const calcSum = () => {
     doSum();
   });
 
+  const minBtn = document.getElementById("btn-min");
+  minBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    doMin();
+  });
+
+  doMath = () => {
+    let valueA = Number(inputA.value);
+    let valueB = Number(inputB.value);
+
+    if (isNaN(valueA)) valueA = 0;
+    if (isNaN(valueB)) valueB = 0;
+
+    return { valueA, valueB };
+  };
+
   doSum = () => {
-    const valueA = Number(inputA.value);
-    const valueB = Number(inputB.value);
+    const math = doMath();
 
-    if (valueA !== isNaN && valueB !== isNaN) {
-      const sum = valueA + valueB;
-      inputC.value = sum;
-    }
+    const sum = math.valueA + math.valueB;
+    inputC.value = sum;
   };
 
-  captureEnter = () => {
-    document.addEventListener("keypress", (e) => {
-      if (e.keyCode === 13) {
-        doMath();
-      }
-    });
-  };
+  doMin = () => {
+    const math = doMath();
 
-  captureEnter();
+    const minus = math.valueA - math.valueB;
+    inputC.value = minus;
+  };
 };
 
-calcSum();
+calculator();
