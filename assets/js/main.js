@@ -3,40 +3,36 @@ const calculator = () => {
   const inputB = document.getElementById("inputB");
   const inputC = document.getElementById("inputC");
 
+  const calc = (operation) => {
+    const math = doMath();
+    let result;
+
+    if (operation === "sum") {
+      result = eval(math.valueA + "+" + math.valueB);
+    } else if (operation === "minus") {
+      result = eval(math.valueA + "-" + math.valueB);
+    }
+
+    inputC.value = result;
+  };
+
   const addBtn = document.getElementById("btn-add");
   addBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    doSum();
+    calc("sum");
   });
 
   const minBtn = document.getElementById("btn-min");
   minBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    doMin();
+    calc("minus");
   });
 
-  doMath = () => {
-    let valueA = Number(inputA.value);
-    let valueB = Number(inputB.value);
-
-    if (isNaN(valueA)) valueA = 0;
-    if (isNaN(valueB)) valueB = 0;
+  const doMath = () => {
+    let valueA = inputA.value;
+    let valueB = inputB.value;
 
     return { valueA, valueB };
-  };
-
-  doSum = () => {
-    const math = doMath();
-
-    const sum = math.valueA + math.valueB;
-    inputC.value = sum;
-  };
-
-  doMin = () => {
-    const math = doMath();
-
-    const minus = math.valueA - math.valueB;
-    inputC.value = minus;
   };
 };
 
