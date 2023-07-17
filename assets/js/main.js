@@ -43,11 +43,23 @@ const calculator = () => {
     calc("division");
   });
 
+  const clearBtn = document.getElementById("btn-clear");
+  clearBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    clear();
+  });
+
   const doMath = () => {
     let valueA = inputA.value;
     let valueB = inputB.value;
 
     return { valueA, valueB };
+  };
+
+  const clear = () => {
+    inputA.value = "";
+    inputB.value = "";
+    inputC.value = "";
   };
 };
 
