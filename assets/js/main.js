@@ -5,13 +5,12 @@ const calculator = () => {
 
   const calc = (operation) => {
     const math = doMath();
-    let result;
-
-    if (operation === "sum") {
-      result = eval(math.valueA + "+" + math.valueB);
-    } else if (operation === "minus") {
-      result = eval(math.valueA + "-" + math.valueB);
-    }
+    let result =
+      operation === "sum"
+        ? eval(math.valueA + "+" + math.valueB)
+        : operation === "minus"
+        ? eval(math.valueA + "-" + math.valueB)
+        : undefined;
 
     inputC.value = result;
   };
