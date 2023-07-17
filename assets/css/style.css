@@ -37,12 +37,22 @@
 #btn-add,
 #btn-min,
 #btn-div,
-#btn-times {
+#btn-times,
+#btn-del,
+#btn-clear {
   height: 60px;
   border: none;
   background-color: #213abf;
   color: #fff;
   border-radius: 5px;
+}
+
+#btn-clear:hover {
+  background-color: #162780;
+}
+
+#btn-del:hover {
+  background-color: #162780;
 }
 
 #btn-add:hover {
@@ -68,11 +78,11 @@
 }
 
 .form > #inputA {
-  grid-column: 3/6;
+  grid-column: 4/6;
 }
 
 .form > #inputB {
-  grid-column: 3/6;
+  grid-column: 4/6;
   grid-row: 2;
 }
 
