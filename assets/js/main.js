@@ -10,6 +10,10 @@ const calculator = () => {
         ? eval(math.valueA + "+" + math.valueB)
         : operation === "minus"
         ? eval(math.valueA + "-" + math.valueB)
+        : operation === "times"
+        ? eval(math.valueA + "*" + math.valueB)
+        : operation === "division"
+        ? eval(math.valueA + "/" + math.valueB)
         : undefined;
 
     inputC.value = result;
@@ -25,6 +29,18 @@ const calculator = () => {
   minBtn.addEventListener("click", (e) => {
     e.preventDefault();
     calc("minus");
+  });
+
+  const timesBtn = document.getElementById("btn-times");
+  timesBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    calc("times");
+  });
+
+  const divBtn = document.getElementById("btn-div");
+  divBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    calc("division");
   });
 
   const doMath = () => {
