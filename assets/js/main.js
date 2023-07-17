@@ -12,9 +12,9 @@ const calculator = () => {
         ? eval(math.valueA + "-" + math.valueB)
         : operation === "times"
         ? eval(math.valueA + "*" + math.valueB)
-        : operation === "division"
+        : operation === "division" && math.valueB !== "0"
         ? eval(math.valueA + "/" + math.valueB)
-        : undefined;
+        : alert("Operação inválida!");
 
     inputC.value = result;
   };
