@@ -44,7 +44,8 @@
 #btn-div,
 #btn-times,
 #btn-del,
-#btn-clear {
+#btn-clear, 
+#btn-equal {
   height: 60px;
   border: none;
   width: 70px;
@@ -74,6 +75,10 @@
 }
 
 #btn-times:hover {
+  background-color: #162780;
+}
+
+#btn-equal:hover {
   background-color: #162780;
 }
 
