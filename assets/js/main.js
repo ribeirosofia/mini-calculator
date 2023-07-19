@@ -6,14 +6,12 @@ const calculator = () => {
   const calc = (operation) => {
     const math = doMath();
     let result =
-      operation === "sum"
-        ? eval(math.valueA + "+" + math.valueB)
-        : operation === "minus"
-        ? eval(math.valueA + "-" + math.valueB)
-        : operation === "times"
-        ? eval(math.valueA + "*" + math.valueB)
-        : operation === "division" && math.valueB !== "0"
-        ? eval(math.valueA + "/" + math.valueB)
+      operation === "+" ||
+      operation === "-" ||
+      operation === "*" ||
+      operation === "/" ||
+      (operation === "/" && math.valueB !== "0")
+        ? eval(math.valueA + operation + math.valueB)
         : alert("Operação inválida!");
 
     inputC.value = result;
@@ -22,25 +20,25 @@ const calculator = () => {
   const addBtn = document.getElementById("btn-add");
   addBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    calc("sum");
+    calc("+");
   });
 
   const minBtn = document.getElementById("btn-min");
   minBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    calc("minus");
+    calc("-");
   });
 
   const timesBtn = document.getElementById("btn-times");
   timesBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    calc("times");
+    calc("*");
   });
 
   const divBtn = document.getElementById("btn-div");
   divBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    calc("division");
+    calc("/");
   });
 
   const clearBtn = document.getElementById("btn-clear");
