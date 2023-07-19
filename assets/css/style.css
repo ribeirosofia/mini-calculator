@@ -44,7 +44,7 @@
 #btn-div,
 #btn-times,
 #btn-del,
-#btn-clear, 
+#btn-clear,
 #btn-equal {
   height: 60px;
   border: none;
@@ -99,5 +99,5 @@
 
 .form > #inputC {
   grid-row: 3;
-  grid-column: 2 / span 9;
+  grid-column: 1 / span 10;
 }
