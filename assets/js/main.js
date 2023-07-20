@@ -5,16 +5,23 @@ const calculator = () => {
 
   const calc = (operation) => {
     const math = doMath();
-    let result =
-      operation === "+" ||
-      operation === "-" ||
-      operation === "*" ||
-      operation === "/" ||
-      (operation === "/" && math.valueB !== "0")
-        ? eval(math.valueA + operation + math.valueB)
-        : alert("Operação inválida!");
 
-    inputC.value = result;
+    if (
+      operation !== "-" &&
+      operation !== "*" &&
+      operation !== "/" &&
+      operation !== "+"
+    ) {
+      alert("Operador inválido!");
+      return;
+    }
+
+    if (operation === "/" && math.valueB === "0") {
+      alert("Operação inválida! Divisão por zero não é possível");
+      return;
+    }
+
+    inputC.value = eval(math.valueA + operation + math.valueB);
   };
 
   const addBtn = document.getElementById("btn-add");
@@ -47,6 +54,12 @@ const calculator = () => {
     clear();
   });
 
+  const equalsBtn = document.getElementById("btn-equals");
+  equalsBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    equals();
+  });
+
   const doMath = () => {
     let valueA = inputA.value;
     let valueB = inputB.value;
@@ -59,6 +72,7 @@ const calculator = () => {
     inputB.value = "";
     inputC.value = "";
   };
-};
 
+  const equals = () => {};
+};
 calculator();
