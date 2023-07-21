@@ -91,15 +91,15 @@ const calculator = () => {
     inputC.value = math.valueC;
   };
 
-  // const equals = () => {
-  //   const math = doMath();
-  //   const operator = math.valueD;
-  //   const result = calc(operator);
+  const equals = () => {
+    const math = doMath();
+    const operator = math.valueD;
+    const result = calc();
 
-  //   if (result !== null) {
-  //     math.valueC = result;
-  //   }
-  // };
+    if (result !== null) {
+      inputC.value = result;
+    }
+  };
 };
 
 calculator();
