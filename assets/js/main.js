@@ -72,7 +72,6 @@ const calculator = () => {
   clearBtn.addEventListener("click", (e) => {
     e.preventDefault();
     clear();
-    console.log("cleared");
   });
 
   const equalsBtn = document.getElementById("btn-equals");
@@ -81,12 +80,16 @@ const calculator = () => {
     equals();
   });
 
-  // const clear = () => {
-  //   const math = doMath();
-  //   math.valueA = "";
-  //   math.valueB = "";
-  //   math.valueC = "";
-  // };
+  const clear = () => {
+    const math = doMath();
+    math.valueA = "";
+    math.valueB = "";
+    math.valueC = "";
+
+    inputA.value = math.valueA;
+    inputB.value = math.valueB;
+    inputC.value = math.valueC;
+  };
 
   // const equals = () => {
   //   const math = doMath();
