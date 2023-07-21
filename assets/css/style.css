@@ -1,5 +1,5 @@
 .container {
-  max-width: 640px;
+  max-width: 740px;
   margin: 50px;
   height: 100px;
   padding: 60px;
@@ -14,7 +14,7 @@
 
 .form {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px;
 }
@@ -78,7 +78,7 @@
   background-color: #162780;
 }
 
-#btn-equal:hover {
+#btn-equals:hover {
   background-color: #162780;
 }
 
@@ -100,4 +100,10 @@
 .form > #inputC {
   grid-row: 3;
   grid-column: 1 / span 10;
+}
+
+.form > #inputD {
+  grid-row: 1;
+  grid-column: 11;
+  width: 50px;
 }
