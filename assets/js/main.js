@@ -44,29 +44,22 @@ const calculator = () => {
     return result;
   };
 
-  const addBtn = document.getElementById("btn-add");
-  addBtn.addEventListener("click", (e) => {
+  const handleOperationClick = (operation) => (e) => {
     e.preventDefault();
-    setOperator("+");
-  });
+    setOperator(operation);
+  };
+
+  const addBtn = document.getElementById("btn-add");
+  addBtn.addEventListener("click", handleOperationClick("+"));
 
   const minBtn = document.getElementById("btn-min");
-  minBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    setOperator("-");
-  });
+  minBtn.addEventListener("click", handleOperationClick("-"));
 
   const timesBtn = document.getElementById("btn-times");
-  timesBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    setOperator("*");
-  });
+  timesBtn.addEventListener("click", handleOperationClick("*"));
 
   const divBtn = document.getElementById("btn-div");
-  divBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    setOperator("/");
-  });
+  divBtn.addEventListener("click", handleOperationClick("/"));
 
   const clearBtn = document.getElementById("btn-clear");
   clearBtn.addEventListener("click", (e) => {
