@@ -85,10 +85,12 @@ const calculator = () => {
     math.valueA = "";
     math.valueB = "";
     math.valueC = "";
+    math.valueD = "";
 
     inputA.value = math.valueA;
     inputB.value = math.valueB;
     inputC.value = math.valueC;
+    inputD.value = math.valueD;
   };
 
   const equals = () => {
